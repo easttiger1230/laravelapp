@@ -978,7 +978,7 @@ Route::get('hello', 'HelloController@index')
    </form>
 @endsection
 
-
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
 リスト4-15
 class HelloController extends Controller
 {
