@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,11 @@ Route::get('hello/edit', 'HelloController@edit');
 Route::post('hello/edit', 'HelloController@update');
 
 
+//-----------データの削除---------//
+Route::get('hello/del', 'HelloController@del');
+Route::post('hello/del', 'HelloController@remove');
+
+
 /////////////////////実習問題/////////////////////
 
 //jissyu3_1///
@@ -54,11 +60,9 @@ Route::get('jissyu5', 'Jissyu3_3Controller@index');
 //jissyu3_4//
 Route::get('jissyu6', 'Jissyu4_1Controller@index');
 Route::post('jissyu6', 'Jissyu4_1Controller@post');
-?>
 
-<?php
+//-----------------------------------------------//
 
-use Illuminate\Support\Facades\Route;
 //問題1
 Route::get('Kouka1_1', 'Kouka1_1Controller@index');
 //問題2
