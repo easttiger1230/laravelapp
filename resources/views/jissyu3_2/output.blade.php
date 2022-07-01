@@ -9,11 +9,15 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    <p>{{$msg}}</p>
-    <form method="POST" action="/jissyu3">
-        @csrf
-        <input type="text" name="msg">
-        <input type="submit">
-    </form>
+    <ol>
+    @foreach($data as $item)
+    @if($loop->first)
+    <p>データ一覧</p>
+    @endif
+    <li>No,{{$loop->iteration}}.{{$item}}</li>
+    @if($loop->last)
+    <p>ここまで出力</p>
+    @endif
+    @endforeach
  </body>
 </html>

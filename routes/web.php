@@ -11,7 +11,7 @@
 |
 */
 //第１引数　アドレス　第２引数　関数
-Route::get('/', function (){
+Route::get('/', function () {
     return view('welcome');
 });
 //});
@@ -26,10 +26,38 @@ Route::post('hello', 'HelloController@post');
 
 //public function index()
 //{
-   // return view('hello.index');
+// return view('hello.index');
 //}
 ///実習問題///
 
 //jissyu3_1///
 //Route::get('jissyu3', 'jissyu3_1Controller@index');
 //Route::post('jissyu3', 'jissyu3_1Controller@index');
+
+//jissyu2_1///
+Route::get('jissyu2', 'JissyuController@index');
+
+//jissyu3_1//
+Route::get('jissyu3', 'Jissyu3_1Controller@index');
+Route::post('jissyu3', 'Jissyu3_1Controller@post');
+
+//jissyu3_2//
+Route::get('jissyu4', 'Jissyu3_2Controller@index');
+Route::post('jissyu4', 'Jissyu3_2Controller@post');
+
+//jissyu3_3//
+Route::get('jissyu5', 'Jissyu3_3Controller@index');
+
+//jissyu3_4//
+Route::get('jissyu6', 'Jissyu4_1Controller@index');
+Route::post('jissyu6', 'Jissyu4_1Controller@post');
+?>
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+//問題1
+Route::get('Kouka1_1', 'Kouka1_1Controller@index');
+//問題2
+Route::get('kouka1_2', 'Kouka1_2Controller@index');
+Route::post('Kouka1_2', 'Kouka1_2Controller@post');
