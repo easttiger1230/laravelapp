@@ -14,25 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//});
-//Route::get('hello', function () {
-//return '<html><body><h1>Hello<h1><p>This is sample page</p><body><html>';
-//});
 
-
-//Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+//----------トップページの表示----------//
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
-//public function index()
-//{
-// return view('hello.index');
-//}
-///実習問題///
+
+
+//----------データの挿入----------//
+Route::get('hello/add', 'HelloController@add');
+Route::post('hello/add', 'HelloController@create');
+
+
+/////////////////////実習問題/////////////////////
 
 //jissyu3_1///
-//Route::get('jissyu3', 'jissyu3_1Controller@index');
-//Route::post('jissyu3', 'jissyu3_1Controller@index');
+Route::get('jissyu3', 'jissyu3_1Controller@index');
+Route::post('jissyu3', 'jissyu3_1Controller@index');
 
 //jissyu2_1///
 Route::get('jissyu2', 'JissyuController@index');
