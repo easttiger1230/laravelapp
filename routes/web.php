@@ -26,6 +26,11 @@ Route::get('hello/add', 'HelloController@add');
 Route::post('hello/add', 'HelloController@create');
 
 
+//----------データの更新----------//
+Route::get('hello/edit', 'HelloController@edit');
+Route::post('hello/edit', 'HelloController@update');
+
+
 /////////////////////実習問題/////////////////////
 
 //jissyu3_1///
