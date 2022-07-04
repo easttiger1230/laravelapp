@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,9 @@ Route::post('hello/edit', 'HelloController@update');
 //-----------データの削除---------//
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
+
+//----------レコードを取得----------//
+Route::get('hello/show', 'HelloController@show');
 
 
 /////////////////////実習問題/////////////////////
