@@ -12,7 +12,7 @@ class HelloController extends Controller
     //----------トップページの表示----------//
     public function index(Request $request)
     {
-        $items = DB::select('select * from people');
+        $items = DB::table('people')->orderBy('age', 'asc')->get();
         return view('hello.index', ['items' => $items]);
     }
 
@@ -36,7 +36,7 @@ class HelloController extends Controller
             'mail' => $request->mail,
             'age' => $request->age,
         ];
-        DB::insert('insert into people (name, mail, age) values (:name, :mail, :age)', $param);
+        DB::table('people')->insert($param);
         return redirect('/hello');
     }
 
@@ -44,37 +44,49 @@ class HelloController extends Controller
 
     public function edit(Request $request)
     {
-        $param = ['id' => $request->id];
-        $item = DB::select('select * from people where id = :id', $param);
-        return view('hello.edit', ['form' => $item[0]]);
+        $item = DB::table('people')
+            ->where('id', $request->id)->first();
+        return view('hello.edit', ['form' => $item]);
     }
 
     public function update(Request $request)
     {
         $param = [
-            'id' => $request->id,
             'name' => $request->name,
             'mail' => $request->mail,
             'age' => $request->age,
         ];
-        DB::update('update people set name =:name, mail = :mail, age = :age where id = :id', $param);
+        DB::table('people')
+            ->where('id', $request->id)
+            ->update($param);
         return redirect('/hello');
     }
 
     ////////////データの削除////////////
 
     public function del(Request $request)
-{
-   $param = ['id' => $request->id];
-   $item = DB::select('select * from people where id = :id', $param);
-   return view('hello.del', ['form' => $item[0]]);
-}
+    {
+        $item = DB::table('people')
+            ->where('id', $request->id)->first();
+        return view('hello.del', ['form' => $item]);
+    }
 
-public function remove(Request $request)
-{
-   $param = ['id' => $request->id];
-   DB::delete('delete from people where id = :id', $param);
-   return redirect('/hello');
-}
-}
+    public function remove(Request $request)
+    {
+        DB::table('people')
+            ->where('id', $request->id)->delete();
+        return redirect('/hello');
+    }
 
+    //////////レコードを取得//////////
+
+    public function show(Request $request)
+    {
+        $page = $request->page;
+        $items = DB::table('people')
+            ->offset($page * 3)
+            ->limit(3)
+            ->get();
+        return view('hello.show', ['items' => $items]);
+    }
+}
