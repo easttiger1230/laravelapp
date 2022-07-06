@@ -40,6 +40,13 @@ Route::post('hello/del', 'HelloController@remove');
 //----------レコードを取得----------//
 Route::get('hello/show', 'HelloController@show');
 
+//---------レコードの表示-----------//
+Route::get('person', 'PersonController@index');
+
+//---------IDによる検索-----------//
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
+
 
 /////////////////////実習問題/////////////////////
 
