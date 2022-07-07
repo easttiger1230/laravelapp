@@ -51,6 +51,10 @@ Route::post('person/find', 'PersonController@search');
 Route::get('person/add', 'PersonController@add');
 Route::post('person/add', 'PersonController@create');
 
+//---------モデルの更新-----------//
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
+
 
 /////////////////////実習問題/////////////////////
 
