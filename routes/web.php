@@ -11,7 +11,7 @@
 |
 */
 //第１引数　アドレス　第２引数　関数
-Route::get('/', function (){
+Route::get('/', function () {
     return view('welcome');
 });
 //});
@@ -26,10 +26,14 @@ Route::post('hello', 'HelloController@post');
 
 //public function index()
 //{
-   // return view('hello.index');
+// return view('hello.index');
 //}
 ///実習問題///
 
 //jissyu3_1///
-//Route::get('jissyu3', 'jissyu3_1Controller@index');
-//Route::post('jissyu3', 'jissyu3_1Controller@index');
+Route::get('jissyu3', 'jissyu3_1Controller@index');
+Route::post('jissyu3', 'jissyu3_1Controller@index');
+
+//jissyu5_1//
+Route::get('jissyu10', 'jissyu5_1Controller@index');
+Route::get('jissyu10/show', 'jissyu5_1Controller@show');
