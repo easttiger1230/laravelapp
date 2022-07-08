@@ -7,14 +7,17 @@
 @endsection
 
 @section('content')
+   <a href="___(19)___">新規登録</a>
    <table>
-   <tr><th>Name</th><th>Mail</th><th>Age</th><th>Select</th></tr>
+   <tr><th>Name</th><th>Mail</th><th>Age</th><th>Select</th><th>Update</th><th>Delete</th></tr>
    @foreach ($items as $item)
        <tr>
            <td>{{$item->name}}</td>
            <td>{{$item->mail}}</td>
            <td>{{$item->age}}</td>
-           <td><a href="/jissyu10/show?id={{$item->id}}">詳細</a></td>
+           <td><a href="/jissyu11/show?id={{$item->id}}">詳細</a></td>
+           <td><a href="/jissyu11/edit?id={{$item->id}}">更新</a></td>
+           <td><a href="/jissyu11/create?id={{$item->id}}">削除</a></td>
        </tr>
    @endforeach
    </table>

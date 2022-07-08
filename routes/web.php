@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('hello', 'HelloController@index');
 Route::post('hello', 'HelloController@post');
 
+<<<<<<< HEAD
 
 
 //----------データの挿入----------//
@@ -65,11 +66,19 @@ Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create');
 
 /////////////////////実習問題/////////////////////
+=======
+//public function index()
+//{
+// return view('hello.index');
+//}
+///実習問題///
+>>>>>>> jissyu
 
 //jissyu3_1///
 Route::get('jissyu3', 'jissyu3_1Controller@index');
 Route::post('jissyu3', 'jissyu3_1Controller@index');
 
+<<<<<<< HEAD
 //jissyu2_1///
 Route::get('jissyu2', 'JissyuController@index');
 
@@ -95,3 +104,18 @@ Route::get('Kouka1_1', 'Kouka1_1Controller@index');
 //問題2
 Route::get('kouka1_2', 'Kouka1_2Controller@index');
 Route::post('Kouka1_2', 'Kouka1_2Controller@post');
+=======
+//jissyu5_1//
+Route::get('jissyu10', 'jissyu5_1Controller@index');
+Route::get('jissyu10/show', 'jissyu5_1Controller@show');
+
+//jissyu5_2//
+Route::get('jissyu11', 'Jissyu5_2Controller@index');
+Route::get('jissyu11/show', 'Jissyu5_2Controller@show');
+Route::get('jissyu11/add', 'Jissyu5_2Controller@add');
+Route::post('jissyu11/create', 'Jissyu5_2Controller@create');
+Route::get('jissyu11/edit', 'Jissyu5_2Controller@edit');
+Route::post('jissyu11/update', 'Jissyu5_2Controller@update');
+Route::get('jissyu11/del', 'Jissyu5_2Controller@del');
+Route::post('jissyu11/remove', 'Jissyu5_2Controller@remove');
+>>>>>>> jissyu
