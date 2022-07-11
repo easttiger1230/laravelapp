@@ -443,6 +443,7 @@ class ComposerStaticInit1fe732078d2bbf96804bbe38e9d16757
         'App\\Http\\Controllers\\Kouka1_1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Kouka1_1Controller.php',
         'App\\Http\\Controllers\\Kouka1_2Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Kouka1_2Controller.php',
         'App\\Http\\Controllers\\PersonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PersonController.php',
+        'App\\Http\\Controllers\\RestappController' => __DIR__ . '/../..' . '/app/Http/Controllers/RestappController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',

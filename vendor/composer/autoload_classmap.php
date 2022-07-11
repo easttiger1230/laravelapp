@@ -28,6 +28,7 @@ return array(
     'App\\Http\\Controllers\\Kouka1_1Controller' => $baseDir . '/app/Http/Controllers/Kouka1_1Controller.php',
     'App\\Http\\Controllers\\Kouka1_2Controller' => $baseDir . '/app/Http/Controllers/Kouka1_2Controller.php',
     'App\\Http\\Controllers\\PersonController' => $baseDir . '/app/Http/Controllers/PersonController.php',
+    'App\\Http\\Controllers\\RestappController' => $baseDir . '/app/Http/Controllers/RestappController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
