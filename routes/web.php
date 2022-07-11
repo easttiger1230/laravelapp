@@ -67,6 +67,14 @@ Route::post('board/add', 'BoardController@create');
 //---------セッション-----------//
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
+Auth::routes();
+
+//---------認証テスト-----------//
+Route::get('hello', 'HelloController@index')
+    ->middleware('auth');
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
+
 
 /////////////////////実習問題/////////////////////
 
@@ -99,3 +107,6 @@ Route::get('Kouka1_1', 'Kouka1_1Controller@index');
 //問題2
 Route::get('kouka1_2', 'Kouka1_2Controller@index');
 Route::post('Kouka1_2', 'Kouka1_2Controller@post');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
