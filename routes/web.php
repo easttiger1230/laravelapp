@@ -74,6 +74,7 @@ Route::get('hello', 'HelloController@index')
     ->middleware('auth');
 Route::get('hello/auth', 'HelloController@getAuth');
 Route::post('hello/auth', 'HelloController@postAuth');
+Route::get('hello','HelloController@index')->middleware('auth');
 
 
 /////////////////////実習問題/////////////////////
