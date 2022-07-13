@@ -121,3 +121,7 @@ Route::get('jissyu11/del', 'Jissyu5_2Controller@del');
 Route::post('jissyu11/remove', 'Jissyu5_2Controller@remove');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//jissyu61//
+Route::get('jissyu13', 'jissyu6_1Controller@index');
+Route::post('jissyu13/find', 'jissyu6_1Controller@find');
